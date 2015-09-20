@@ -19,7 +19,7 @@ file(GLOB PLATFORM_SRCS
 
 source_group_by_dir(PLATFORM_SRCS)
 
-#ADD_MSVC_PRECOMPILED_HEADER("cpp/precompile/precompiledProject.h" "cpp/precompile/precompiledProject.cpp" ${PLATFORM_SRCS})
+ADD_MSVC_PRECOMPILED_HEADER("cpp/precompile/precompiled.h" "cpp/precompile/precompiled.cpp" ${PLATFORM_SRCS})
 
 
 add_executable(HorizonCore ${PLATFORM_HEADER} ${PLATFORM_SRCS})
