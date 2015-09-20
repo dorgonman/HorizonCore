@@ -1,3 +1,4 @@
+#include "cpp/precompile/precompiled.h"
 #include "Timer.h"
 
 double Timer::elapsed() const {

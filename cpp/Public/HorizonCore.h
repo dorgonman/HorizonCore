@@ -12,7 +12,7 @@ namespace horizon{
         ~HorizonCore();
     public:
         static HorizonCore* GetInstance();
-
+         
         void init();
         //flush log to file
         void flushAllLog();

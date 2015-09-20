@@ -1,3 +1,4 @@
+#include "cpp/precompile/precompiled.h"
 #include "HorizonCore.h"
 #include "HorizonLog.h"
 #include <boost/shared_ptr.hpp>

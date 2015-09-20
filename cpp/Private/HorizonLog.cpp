@@ -1,5 +1,6 @@
+#include "cpp/precompile/precompiled.h"
 #include "HorizonLog.h"
-#include<Windows.h> 
+#include <Windows.h> 
 #include <tchar.h> 
 #define MAX_LEN 256
 //BOOST_LOG_ATTRIBUTE_KEYWORD(module, "Module", std::string)
