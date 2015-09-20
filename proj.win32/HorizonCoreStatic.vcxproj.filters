@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="Windows-1252"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\dorgonman\Documents\workspace\project_horizon\HorizonCore\cpp\Private\HorizonCore.cpp">
+      <Filter>cpp\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dorgonman\Documents\workspace\project_horizon\HorizonCore\cpp\Private\HorizonLog.cpp">
+      <Filter>cpp\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dorgonman\Documents\workspace\project_horizon\HorizonCore\cpp\Private\Timer.cpp">
+      <Filter>cpp\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dorgonman\Documents\workspace\project_horizon\HorizonCore\cpp\Platform\windows\implement\HorizonLog_windows.cpp">
+      <Filter>cpp\Platform\windows\implement</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\dorgonman\Documents\workspace\project_horizon\HorizonCore\cpp\Public\HorizonCore.h">
+      <Filter>cpp\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\dorgonman\Documents\workspace\project_horizon\HorizonCore\cpp\Public\HorizonLog.h">
+      <Filter>cpp\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\dorgonman\Documents\workspace\project_horizon\HorizonCore\cpp\Public\StateMachineContext.h">
+      <Filter>cpp\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\dorgonman\Documents\workspace\project_horizon\HorizonCore\cpp\Private\Timer.h">
+      <Filter>cpp\Private</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\dorgonman\Documents\workspace\project_horizon\HorizonCore\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="cpp\Platform\windows">
+      <UniqueIdentifier>{FD778766-E353-4DE1-9B6F-DBEE21EA6C53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cpp">
+      <UniqueIdentifier>{7608A863-AA71-468F-8F5A-9ECF006E4692}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cpp\Public">
+      <UniqueIdentifier>{ECABB2FB-73FA-4F79-8843-C6169F52D6FC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cpp\Private">
+      <UniqueIdentifier>{32AB9535-C76C-4740-A3E1-EB116E7E22B0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cpp\Platform">
+      <UniqueIdentifier>{E6103AD6-7E7E-4237-9C6C-381902877542}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cpp\Platform\windows\implement">
+      <UniqueIdentifier>{93E12FDD-7311-4B18-BEF9-CDE9CF907CDD}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

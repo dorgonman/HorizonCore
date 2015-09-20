@@ -1,0 +1,4 @@
+C:/Users/dorgonman/Documents/workspace/project_horizon/HorizonCore/proj.win32/CMakeFiles/HorizonCoreStatic.dir
+C:/Users/dorgonman/Documents/workspace/project_horizon/HorizonCore/proj.win32/CMakeFiles/HorizonCore.dir
+C:/Users/dorgonman/Documents/workspace/project_horizon/HorizonCore/proj.win32/CMakeFiles/ALL_BUILD.dir
+C:/Users/dorgonman/Documents/workspace/project_horizon/HorizonCore/proj.win32/CMakeFiles/ZERO_CHECK.dir
