@@ -16,6 +16,8 @@ namespace horizon{
         void init();
         //flush log to file
         void flushAllLog();
+
+        void setLogEnable(bool bEnable);
     private:
         void initLog();
  

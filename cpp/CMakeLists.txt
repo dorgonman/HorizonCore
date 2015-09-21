@@ -8,18 +8,18 @@ include(${HORIZON_SCRIPT_ROOT}/cmake/LibSetting.cmake)
 
 
 file(GLOB PLATFORM_HEADER
- 	"cpp/Platform/standard/*.h"
-	"cpp/precompile/precompiled.h"
+ 	"Platform/standard/*.h"
+	"precompile/precompiled.h"
 )
 source_group_by_dir(PLATFORM_HEADER)
 file(GLOB PLATFORM_SRCS
-    "cpp/Platform/standard/*.cpp"
-	"cpp/precompile/precompiled.cpp"
+    "Platform/standard/*.cpp"
+	"precompile/precompiled.cpp"
 )
 
 source_group_by_dir(PLATFORM_SRCS)
 
-ADD_MSVC_PRECOMPILED_HEADER("cpp/precompile/precompiled.h" "cpp/precompile/precompiled.cpp" ${PLATFORM_SRCS})
+ADD_MSVC_PRECOMPILED_HEADER("precompile/precompiled.h" "precompile/precompiled.cpp" ${PLATFORM_SRCS})
 
 
 add_executable(HorizonCore ${PLATFORM_HEADER} ${PLATFORM_SRCS})
@@ -27,10 +27,10 @@ add_executable(HorizonCore ${PLATFORM_HEADER} ${PLATFORM_SRCS})
 
 IF (WIN32)
 	file(GLOB PLATFORM_WIN32_IMPLEMENT_HEADER
-		"cpp/Platform/windows/implement/*.h"
+		"Platform/windows/implement/*.h"
 	)
 	file(GLOB PLATFORM_WIN32_IMPLEMENT_SRCS
-		"cpp/Platform/windows/implement/*.cpp"
+		"Platform/windows/implement/*.cpp"
 	)
 	source_group_by_dir(PLATFORM_WIN32_IMPLEMENT_HEADER)
 	source_group_by_dir(PLATFORM_WIN32_IMPLEMENT_SRCS)
@@ -44,18 +44,18 @@ ENDIF()
 
 
 file(GLOB PROJ_HEADER
-	"cpp/Public/*.hpp"
- 	"cpp/Public/*.h"
-   	"cpp/Private/*.hpp"
-   	"cpp/Private/*.h"
-	"cpp/precompile/precompiled.h"
+	"Public/*.hpp"
+ 	"Public/*.h"
+   	"Private/*.hpp"
+   	"Private/*.h"
+	"precompile/precompiled.h"
 )
 source_group_by_dir(PROJ_HEADER)
 
 file(GLOB PROJ_SRCS
-    "cpp/Public/*.cpp"
-    "cpp/Private/*.cpp"
-	"cpp/precompile/precompiled.cpp"
+    "Public/*.cpp"
+    "Private/*.cpp"
+	"precompile/precompiled.cpp"
 )
 source_group_by_dir(PROJ_SRCS)
 

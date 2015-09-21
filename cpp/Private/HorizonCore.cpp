@@ -1,4 +1,4 @@
-#include "cpp/precompile/precompiled.h"
+#include "precompile/precompiled.h"
 #include "HorizonCore.h"
 #include "HorizonLog.h"
 #include <boost/shared_ptr.hpp>
@@ -51,7 +51,6 @@ namespace horizon{
 
     void HorizonCore::init(){
         initLog();
-        HORIZON_TRACE << "HorizonCore starting...";
 
     }
 
@@ -115,6 +114,10 @@ namespace horizon{
         boost::log::core::get()->flush();
     }
 
+
+    void HorizonCore::setLogEnable(bool bEnable){
+        boost::log::core::get()->set_logging_enabled(bEnable);
+    }
 
 
 }//namespace horizon
