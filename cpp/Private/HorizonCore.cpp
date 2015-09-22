@@ -56,7 +56,8 @@ namespace horizon{
 
     void HorizonCore::initLog(){
        // SET_MODULE(logging::core::get(), HorizonCore);
-        typedef  boost::log::sinks::synchronous_sink<LogBackend> HorizonLogSink;
+        //typedef  boost::log::sinks::synchronous_sink<LogBasicFormatedBackend> HorizonLogSink;
+        typedef  boost::log::sinks::synchronous_sink<LogBasicBackend> HorizonLogSink;
         boost::shared_ptr<HorizonLogSink> sink = boost::make_shared<HorizonLogSink>();
         //boost::log::add_common_attributes();
         auto logFormat = expr::format("%1%: [%2%] [%3%]: %4%")
@@ -64,19 +65,19 @@ namespace horizon{
             % expr::attr< boost::log::trivial::severity_level >("Severity")
             % expr::attr< boost::posix_time::ptime >("TimeStamp")
             % expr::smessage;
-        sink->set_formatter(logFormat);
+       // sink->set_formatter(logFormat);
         logging::core::get()->add_global_attribute("RecordID", attrs::counter< unsigned int >());
         logging::core::get()->add_global_attribute("TimeStamp", attrs::local_clock());
 
 
 
-        std::locale loc = boost::locale::generator()("en_US.UTF-8");
-        sink->imbue(loc);
+        //std::locale loc = boost::locale::generator()("en_US.UTF-8");
+        //sink->imbue(loc);
         boost::log::core::get()->add_sink(sink);
 
 
 
-        logging::add_file_log(
+        auto fileLog = logging::add_file_log(
             keywords::file_name = "HorizonCore.log",
             keywords::filter = expr::attr< boost::log::trivial::severity_level >("Severity") >= boost::log::trivial::trace,
             keywords::format = (logFormat)

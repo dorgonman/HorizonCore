@@ -22,7 +22,26 @@
 #define HORIZON_ERROR     BOOST_LOG_TRIVIAL(error) << HORIZON_LOG_FUNCTION
 #define HORIZON_FATAL     BOOST_LOG_TRIVIAL(fatal) << HORIZON_LOG_FUNCTION*/
 namespace horizon{
-    void LogBackend::logMessage(const boost::log::record_view& rec, const std::string& msg){
+    void LogBasicBackend::logMessage(const boost::log::record_view& rec, const std::string& msg){
+        //std::cout << msg;
+        if (msg.size() > HORIZON_LOG_MAX_LEN){
+            logMessageImplement(msg.substr(0, HORIZON_LOG_MAX_LEN - 1));
+            logMessage(rec, msg.substr(HORIZON_LOG_MAX_LEN - 1, msg.size()));
+
+        }
+        else{
+            logMessageImplement(msg);
+            logMessageImplement("\n");
+        }
+    }
+    void LogBasicBackend::consume(const boost::log::record_view& rec){
+
+        const std::string msgStr = rec[boost::log::expressions::smessage].get().c_str();
+        logMessage(rec, msgStr);
+    }
+
+
+    void LogBasicFormatedBackend::logMessage(const boost::log::record_view& rec, const std::string& msg){
         //std::cout << msg;
         if (msg.size() > HORIZON_LOG_MAX_LEN){
             logMessageImplement(msg.substr(0, HORIZON_LOG_MAX_LEN - 1));
@@ -34,7 +53,7 @@ namespace horizon{
             logMessageImplement("\n");
         }
     }
-    void LogBackend::consume(const boost::log::record_view& rec, string_type const& msg){
+    void LogBasicFormatedBackend::consume(const boost::log::record_view& rec, string_type const& msg){
 
         const std::string msgStr = msg;
         logMessage(rec, msgStr);
