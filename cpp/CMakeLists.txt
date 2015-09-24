@@ -22,7 +22,7 @@ source_group_by_dir(PLATFORM_SRCS)
 ADD_MSVC_PRECOMPILED_HEADER("precompile/precompiled.h" "precompile/precompiled.cpp" ${PLATFORM_SRCS})
 
 
-add_executable(HorizonCore ${PLATFORM_HEADER} ${PLATFORM_SRCS})
+add_executable(${PROJECT_NAME} ${PLATFORM_HEADER} ${PLATFORM_SRCS})
 
 
 IF (WIN32)
@@ -61,8 +61,8 @@ source_group_by_dir(PROJ_SRCS)
 
 #HorizonCoreStatic.dir/$(Configuration)/
 
-ADD_MSVC_PRECOMPILED_HEADER("cpp/precompile/precompiled.h" "cpp/precompile/precompiled.cpp" ${PROJ_SRCS})
-ADD_MSVC_PRECOMPILED_HEADER("cpp/precompile/precompiled.h" "cpp/precompile/precompiled.cpp" ${PLATFORM_IMPLEMENT_SRCS})
+ADD_MSVC_PRECOMPILED_HEADER("precompile/precompiled.h" "precompile/precompiled.cpp" ${PROJ_SRCS})
+ADD_MSVC_PRECOMPILED_HEADER("precompile/precompiled.h" "precompile/precompiled.cpp" ${PLATFORM_IMPLEMENT_SRCS})
 
 add_library(HorizonCoreStatic STATIC ${PROJ_HEADER} ${PLATFORM_IMPLEMENT_HEADER}  
 									 ${PROJ_SRCS}   ${PLATFORM_IMPLEMENT_SRCS})
