@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.1.0 FATAL_ERROR)
 PROJECT (HorizonCore CXX)
 
-include(${HORIZON_SCRIPT_ROOT}/cmake/UtilMacro.cmake)
-include(${HORIZON_SCRIPT_ROOT}/cmake/ProjectSetting.cmake)
-include(${HORIZON_SCRIPT_ROOT}/cmake/LibSetting.cmake)
+include(${HORIZON_BUILD_TOOL_ROOT}/cmake/UtilMacro.cmake)
+include(${HORIZON_BUILD_TOOL_ROOT}/cmake/ProjectSetting.cmake)
+include(${HORIZON_BUILD_TOOL_ROOT}/cmake/LibSetting.cmake)
 
 
 
@@ -72,4 +72,4 @@ add_library(HorizonCoreStatic STATIC ${PROJ_HEADER} ${PLATFORM_IMPLEMENT_HEADER}
 
 #add_library(HorizonCoreShared SHARED ${PROJ_SRCS})
 
-include(${HORIZON_SCRIPT_ROOT}/cmake/LibLink.cmake)
+include(${HORIZON_BUILD_TOOL_ROOT}/cmake/LibLink.cmake)
